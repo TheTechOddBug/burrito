@@ -116,7 +116,7 @@ config:
 hermitcrab:
   # -- Enable/Disable Hermitcrab (terraform provider cache in cluster)
   enabled: false
-    # -- Metadata configuration for Hermitcrab
+  # -- Metadata configuration for Hermitcrab
   metadata:
     labels:
       app.kubernetes.io/component: hermitcrab
@@ -341,7 +341,11 @@ controllers:
     command: ["burrito"]
     # -- Arguments to pass to the Burrito controller container
     args: ["controllers", "start"]
-    # -- Controller liveness probe configuration
+    # -- Controller exposed ports
+    ports:
+      - name: metrics
+        containerPort: 8080
+      # -- Controller liveness probe configuration
     livenessProbe:
       httpGet:
         path: /healthz
@@ -388,6 +392,23 @@ controllers:
     metadata:
       labels: {}
       annotations: {}
+    ports:
+      - name: metrics
+        port: 80
+        targetPort: metrics
+  metricsIngress:
+    # -- Enable/Disable ingress creation for the Burrito controller metrics endpoint (controllers.service MUST be enabled)
+    enabled: false
+    # -- Metadata configuration for the Burrito controller metrics ingress
+    metadata:
+      labels: {}
+      annotations: {}
+    # -- Ingress class name to use for the Burrito controller metrics ingress
+    ingressClassName: nginx
+    # -- Hostname for the Burrito controller metrics ingress
+    host: burrito-controllers.example.com
+    # -- TLS configuration for the Burrito controller metrics ingress
+    tls: []
 
 server:
   # -- Metadata configuration for the Burrito server
