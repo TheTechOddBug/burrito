@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/icon/burrito.png">
-      <meta name="generator" content="zensical-0.0.57">
+      <meta name="generator" content="zensical-0.0.60">
     
     
       
@@ -32,7 +32,7 @@
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.38807bfb.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.e0592429.min.css">
       
       
 
@@ -1010,6 +1010,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#datastores-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Datastore's configuration
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#servers-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1709,6 +1720,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#datastores-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Datastore's configuration
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#servers-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1842,6 +1864,28 @@ They can be set in the Helm chart <a href="https://github.com/padok-team/burrito
 <td style="text-align: center;">maximum number for pods that run in parallel to perform plan/apply (0=inf)</td>
 <td style="text-align: center;"><code>0</code></td>
 </tr>
+<tr>
+<td style="text-align: center;"><code>BURRITO_CONTROLLER_LOGFORMAT</code></td>
+<td style="text-align: center;">log format for the controller, either <code>text</code> or <code>json</code></td>
+<td style="text-align: center;"><code>text</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="datastores-configuration">Datastore's configuration<a class="headerlink" href="#datastores-configuration" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>BURRITO_DATASTORE_LOGFORMAT</code></td>
+<td style="text-align: center;">log format for the datastore, either <code>text</code> or <code>json</code></td>
+<td style="text-align: center;"><code>text</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="servers-configuration">Server's configuration<a class="headerlink" href="#servers-configuration" title="Permanent link">&para;</a></h2>
@@ -1954,7 +1998,7 @@ They can be set in the Helm chart <a href="https://github.com/padok-team/burrito
       <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.indexes","navigation.instant","navigation.instant.prefetch","search.highlight"],"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":{"provider":"mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.49251538.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88ee1349.min.js"></script>
       
     
   </body>
